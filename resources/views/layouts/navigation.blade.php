@@ -6,7 +6,10 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
+
                         <span class="text-info">BLOB</span> le Blog
+
+
                     </a>
                 </div>
 
@@ -14,6 +17,12 @@
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Accueil') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('account')" :active="request()->routeIs('account')">
+                        {{ __('Account') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('articles.index')" :active="request()->routeIs('articles.index')">
+                        {{ __('Articles') }}
                     </x-nav-link>
                 </div>
             </div>
