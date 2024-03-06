@@ -1,0 +1,12 @@
+.text-cyan {
+    color: #0dcaf0;
+}
+.hover\:text-cyan:hover {
+    color: #0dcaf0;
+}
+.border-cyan {
+    border-color: #0dcaf0;
+}
+.link-underline {
+    text-decoration: underline;
+}

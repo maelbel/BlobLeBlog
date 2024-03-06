@@ -8,6 +8,7 @@
                 <!-- Formulaire pour créer un nouvel article -->
                 <form action="{{ route('articles.store') }}" method="POST">
                     @csrf
+                    <input type="hidden" name="created_by" id="created_by" value="{{ $user->id }}"/>
 
                     <div class="mb-4">
                         <label for="title" class="block text-sm font-medium text-gray-600">Titre de l'article</label>

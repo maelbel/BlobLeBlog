@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\FeedController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,12 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', [FeedController::class, 'index'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-    
-    Route::get('/', function () {
-        return view('dashboard');
-    })->name('dashboard');
     
     Route::get('/account', function () {
         return view('account');
